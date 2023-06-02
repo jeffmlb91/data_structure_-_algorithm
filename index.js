@@ -15,4 +15,44 @@ function logItems(n) {
         console.log(i);
     }
 }
-logItems(10);
+//logItems(10); // outputs 0 to 10 in the console
+
+//Big 0 has several way in which we simplify the notation 
+//1. Drop constants
+
+function logItemOne (n) {
+    for(let i = 0; i < n; i ++) {
+        console.log(`first for loop ${i}`);
+    }
+    for(let j = 0; j < n; j ++) {
+        console.log(`second for loop ${j}`)
+    }
+}
+logItemOne(3)
+//THe algorithim ran n + n times = 0(2n) | We drop the constant and makes it 0(n)
+
+
+//2.(0n^2) O of n squared
+
+function logItemNsquare(n) {
+    for(let i = 0; i < n; i ++) {
+        for(let j = 0; j < n; j ++) {
+            console.log(i, j)
+        }
+    }
+}
+logItemNsquare(10);
+//The number of item we are output in this case is n * n = n^2
+//We can add another for loop in the equation
+
+function logItemNsquareTimesThree(n) {
+    for(let i = 0; i < n; i ++) {
+        for(let j = 0; j < n; j ++) {
+            for(let k = 0; k < n; k ++) {
+                console.log(i, j, k)
+            }
+        }
+    }
+}
+logItemNsquareTimesThree(10)
+//The number of item we are output in this case is n * n * n = n^3 = n^2 | it can even fo to 3.5.6..... | still o(n^2)
